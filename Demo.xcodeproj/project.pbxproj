@@ -15,6 +15,7 @@
 		DBDBC847236C444B00486729 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBDBC846236C444B00486729 /* Assets.xcassets */; };
 		DBDBC84A236C444B00486729 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBDBC849236C444B00486729 /* Preview Assets.xcassets */; };
 		DBDBC84D236C444B00486729 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBDBC84B236C444B00486729 /* LaunchScreen.storyboard */; };
+		DBDBC857236C446900486729 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBDBC856236C446900486729 /* CloudKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,8 @@
 		DBDBC849236C444B00486729 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DBDBC84C236C444B00486729 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DBDBC84E236C444B00486729 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DBDBC854236C446300486729 /* Demo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Demo.entitlements; sourceTree = "<group>"; };
+		DBDBC856236C446900486729 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBDBC857236C446900486729 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,6 +50,7 @@
 			children = (
 				DBDBC83A236C444600486729 /* Demo */,
 				DBDBC839236C444600486729 /* Products */,
+				DBDBC855236C446900486729 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,6 +65,7 @@
 		DBDBC83A236C444600486729 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				DBDBC854236C446300486729 /* Demo.entitlements */,
 				DBDBC83B236C444600486729 /* AppDelegate.swift */,
 				DBDBC840236C444600486729 /* SceneDelegate.swift */,
 				DBDBC842236C444600486729 /* Event.swift */,
@@ -79,6 +85,14 @@
 				DBDBC849236C444B00486729 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		DBDBC855236C446900486729 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DBDBC856236C446900486729 /* CloudKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -292,6 +306,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Demo/Demo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Demo/Preview Content\"";
 				DEVELOPMENT_TEAM = 6UR9TA6744;
@@ -312,6 +327,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Demo/Demo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Demo/Preview Content\"";
 				DEVELOPMENT_TEAM = 6UR9TA6744;
